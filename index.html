@@ -1,45 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy | Política de Privacidade</title>
+  <title>Privacy Policy | Beelong</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: "Helvetica Neue", sans-serif;
-      background-color: #f9f9f9;
-      color: #222;
-      line-height: 1.6;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1d1d1f;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    header {
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+      position: relative;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+    .back-link {
+      position: absolute;
+      left: 20px;
+      top: 30px;
+      font-size: 0.9rem;
+    }
+    .back-link a {
+      text-decoration: none;
+      color: #555;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+    .lang-switch {
+      position: absolute;
+      top: 30px;
+      right: 20px;
+    }
+    .lang-btn {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      font-size: 0.9rem;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 8px;
     }
     .container {
       max-width: 800px;
-      margin: 60px auto;
+      margin: 40px auto;
       padding: 0 20px;
     }
-    h1 {
-      font-size: 2.2rem;
-      color: #1c1c1e;
-    }
     h2 {
-      font-size: 1.5rem;
-      margin-top: 2em;
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #111;
     }
     p {
-      margin-bottom: 1em;
+      margin-top: 1rem;
     }
-    .language-switch {
-      text-align: right;
-      margin-bottom: 20px;
-    }
-    .lang-btn {
-      padding: 6px 12px;
-      background: #000;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      font-size: 0.9rem;
-      border-radius: 4px;
+    a {
+      color: #0066ff;
+      text-decoration: none;
     }
     .section {
       display: none;
@@ -47,80 +81,74 @@
     .section.active {
       display: block;
     }
+
     @media (max-width: 600px) {
-      h1 {
-        font-size: 1.6rem;
+      .lang-switch {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
       }
-      .container {
-        margin: 40px 20px;
+      .back-link {
+        position: static;
+        margin-bottom: 10px;
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="language-switch">
-      <button class="lang-btn" onclick="switchLanguage('pt')">Português</button>
+  <header>
+    <div class="back-link">
+      <a href="https://www.beelong.ai" target="_blank">← Back to Beelong</a>
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="lang-switch">
       <button class="lang-btn" onclick="switchLanguage('en')">English</button>
+      <button class="lang-btn" onclick="switchLanguage('pt')">Português</button>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- English Section -->
+    <div id="en" class="section active">
+      <p><strong>Last updated:</strong> July 22, 2025</p>
+
+      <p>This is a demo version of <strong>Beelong</strong>, a customized AI solution for direct selling and multi-level marketing companies.</p>
+
+      <p>This app is a demo version of Beelong, an artificial intelligence solution designed for personalized customer service, engagement, and automation, with a focus on direct selling and multi-level marketing businesses.</p>
+
+      <p><strong>We do not collect, store, or process any personal information through this demo app.</strong></p>
+
+      <p>Beelong offers a customizable platform, tailored to meet the specific needs of each client, delivering a unique and efficient experience for companies looking to scale their relationships.</p>
+
+      <p>This version is intended for demonstration and testing purposes only and does not represent the final product.</p>
+
+      <p>For more information about the full solution, visit: <a href="https://www.beelong.ai" target="_blank">https://www.beelong.ai</a></p>
+
+      <h2>Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, feel free to contact us at: <a href="mailto:hello@beelong.ai">hello@beelong.ai</a></p>
     </div>
 
-    <!-- PT -->
-    <div id="pt" class="section active">
-      <h1>Política de Privacidade</h1>
-      <p>Última atualização: 22 de julho de 2025</p>
+    <!-- Portuguese Section -->
+    <div id="pt" class="section">
+      <p><strong>Última atualização:</strong> 22 de julho de 2025</p>
 
-      <p>Sua privacidade é importante para nós. Esta Política de Privacidade explica como coletamos, usamos, divulgamos e protegemos suas informações ao utilizar nosso aplicativo.</p>
+      <p>Esta é uma versão demo da <strong>Beelong</strong>, uma solução de inteligência artificial personalizada para empresas de venda direta e marketing multinível.</p>
 
-      <h2>1. Informações que coletamos</h2>
-      <p>Podemos coletar dados como nome, e-mail, dados de uso do aplicativo e informações do dispositivo para melhorar sua experiência.</p>
+      <p>Este aplicativo é uma versão de demonstração da Beelong, uma solução de IA voltada para atendimento ao cliente, engajamento e automação, com foco em empresas que atuam com venda direta e marketing de rede.</p>
 
-      <h2>2. Como usamos suas informações</h2>
-      <p>Usamos seus dados para oferecer funcionalidades, melhorar o app, oferecer suporte e comunicação personalizada.</p>
+      <p><strong>Não coletamos, armazenamos ou processamos qualquer informação pessoal neste aplicativo de demonstração.</strong></p>
 
-      <h2>3. Compartilhamento de informações</h2>
-      <p>Não compartilhamos suas informações com terceiros, exceto quando exigido por lei ou com seu consentimento.</p>
+      <p>A Beelong oferece uma plataforma personalizável, adaptada às necessidades específicas de cada cliente, proporcionando uma experiência única e eficiente para empresas que buscam escalar seus relacionamentos.</p>
 
-      <h2>4. Segurança</h2>
-      <p>Adotamos medidas de segurança para proteger seus dados contra acesso não autorizado, alteração ou divulgação.</p>
+      <p>Esta versão é destinada apenas para fins de demonstração e testes e não representa o produto final.</p>
 
-      <h2>5. Seus direitos</h2>
-      <p>Você pode solicitar acesso, correção ou exclusão de seus dados a qualquer momento.</p>
+      <p>Para mais informações sobre a solução completa, acesse: <a href="https://www.beelong.ai" target="_blank">https://www.beelong.ai</a></p>
 
-      <h2>6. Alterações nesta Política</h2>
-      <p>Esta política pode ser atualizada periodicamente. Notificaremos alterações significativas diretamente no app.</p>
-
-      <h2>7. Contato</h2>
-      <p>Em caso de dúvidas, entre em contato conosco: <a href="mailto:contato@seudominio.com">contato@seudominio.com</a></p>
-    </div>
-
-    <!-- EN -->
-    <div id="en" class="section">
-      <h1>Privacy Policy</h1>
-      <p>Last updated: July 22, 2025</p>
-
-      <p>Your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and protect your information when using our app.</p>
-
-      <h2>1. Information We Collect</h2>
-      <p>We may collect data such as your name, email, app usage data, and device information to enhance your experience.</p>
-
-      <h2>2. How We Use Your Information</h2>
-      <p>We use your data to provide features, improve the app, offer support, and personalized communication.</p>
-
-      <h2>3. Information Sharing</h2>
-      <p>We do not share your information with third parties, except as required by law or with your consent.</p>
-
-      <h2>4. Security</h2>
-      <p>We implement security measures to protect your data from unauthorized access, alteration, or disclosure.</p>
-
-      <h2>5. Your Rights</h2>
-      <p>You may request access to, correction, or deletion of your data at any time.</p>
-
-      <h2>6. Changes to This Policy</h2>
-      <p>This policy may be updated periodically. We will notify you of significant changes within the app.</p>
-
-      <h2>7. Contact</h2>
-      <p>If you have any questions, contact us at: <a href="mailto:contact@yourdomain.com">contact@yourdomain.com</a></p>
+      <h2>Fale Conosco</h2>
+      <p>Se tiver dúvidas sobre esta Política de Privacidade, entre em contato: <a href="mailto:hello@beelong.ai">hello@beelong.ai</a></p>
     </div>
   </div>
 
