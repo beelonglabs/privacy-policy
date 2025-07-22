@@ -6,7 +6,6 @@
   <title>Privacy Policy - Beelong</title>
   <link rel="icon" href="https://media.licdn.com/dms/image/v2/D4D0BAQHgItTL9LyFgw/company-logo_200_200/company-logo_200_200/0/1728996469468/beelonghub_logo?e=2147483647&v=beta&t=Cf4QzisJtJZylwuRJzgYgVtZcvedSaMGGRFOpa9rNws" />
   <style>
-    /* Reset básico */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -17,15 +16,14 @@
       color: #333333;
       margin: 0;
       padding: 40px 20px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
       font-size: 16px;
+      line-height: 1.6;
     }
 
+    /* Header ocupa 100% da viewport */
     header {
-      width: 100%;
+      width: 100vw;
+      max-width: 100vw;
       background-color: #F2F2F0;
       border-bottom: 1px solid #999999;
       padding: 18px 40px;
@@ -36,6 +34,19 @@
       position: relative;
       z-index: 10;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      /* Para garantir que não haja scroll horizontal */
+      overflow-x: hidden;
+    }
+
+    /* Container interno para limitar o conteúdo do header */
+    .header-container {
+      width: 800px;
+      max-width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
     }
 
     .back-link a {
@@ -91,11 +102,12 @@
     }
 
     section {
-      display: none;
-      margin-top: 40px;
+      max-width: 800px;
+      margin: 40px auto 0;
       font-size: 1rem;
       color: #444444;
       line-height: 1.7;
+      display: none;
     }
 
     section.active {
@@ -120,8 +132,9 @@
     }
 
     footer {
+      max-width: 800px;
+      margin: 60px auto;
       text-align: center;
-      margin-top: 60px;
       font-size: 0.9rem;
       color: #666666;
       user-select: none;
@@ -130,6 +143,10 @@
     @media (max-width: 600px) {
       header {
         padding: 20px;
+      }
+      .header-container {
+        width: 100%;
+        padding: 0 20px;
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
@@ -138,8 +155,8 @@
       h1 {
         text-align: left;
         font-size: 1.5rem;
-        margin: 0;
         width: 100%;
+        margin: 0;
         flex: unset;
       }
 
@@ -155,20 +172,27 @@
         padding: 12px 0;
         font-size: 1rem;
       }
+
+      section, footer {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="back-link">
-      <a href="https://www.beelong.ai" target="_blank" rel="noopener noreferrer">← Back to Beelong</a>
-    </div>
-    <h1>Privacy Policy</h1>
-    <div class="lang-switch">
-      <button class="lang-btn active" onclick="switchLanguage('en')" aria-pressed="true">EN</button>
-      <button class="lang-btn" onclick="switchLanguage('pt')" aria-pressed="false">PT</button>
-      <button class="lang-btn" onclick="switchLanguage('es')" aria-pressed="false">ES</button>
-      <button class="lang-btn" onclick="switchLanguage('fr')" aria-pressed="false">FR</button>
+    <div class="header-container">
+      <div class="back-link">
+        <a href="https://www.beelong.ai" target="_blank" rel="noopener noreferrer">← Back to Beelong</a>
+      </div>
+      <h1>Privacy Policy</h1>
+      <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLanguage('en')" aria-pressed="true">EN</button>
+        <button class="lang-btn" onclick="switchLanguage('pt')" aria-pressed="false">PT</button>
+        <button class="lang-btn" onclick="switchLanguage('es')" aria-pressed="false">ES</button>
+        <button class="lang-btn" onclick="switchLanguage('fr')" aria-pressed="false">FR</button>
+      </div>
     </div>
   </header>
 
