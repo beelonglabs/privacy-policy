@@ -6,13 +6,13 @@
   <title>Privacy Policy - Beelong</title>
   <link rel="icon" href="https://media.licdn.com/dms/image/v2/D4D0BAQHgItTL9LyFgw/company-logo_200_200/company-logo_200_200/0/1728996469468/beelonghub_logo?e=2147483647&v=beta&t=Cf4QzisJtJZylwuRJzgYgVtZcvedSaMGGRFOpa9rNws" />
   <style>
-    /* Reset básico para margin e box-sizing */
+    /* Reset básico */
     *, *::before, *::after {
       box-sizing: border-box;
     }
-    
+
     body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #F2F2F0;
       color: #333333;
       margin: 0;
@@ -28,59 +28,66 @@
       width: 100%;
       background-color: #F2F2F0;
       border-bottom: 1px solid #999999;
-      padding: 20px 40px;
+      padding: 18px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       position: relative;
       z-index: 10;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
     .back-link a {
       text-decoration: none;
-      color: #222222;
-      font-size: 0.95rem;
+      color: #000000;
+      font-size: 1rem;
       font-weight: 600;
-      transition: color 0.3s ease;
+      transition: color 0.25s ease;
     }
-    .back-link a:hover {
+    .back-link a:hover,
+    .back-link a:focus {
       color: #20ffd4;
+      outline: none;
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.9rem;
       margin: 0;
       flex: 1 1 auto;
       text-align: center;
-      color: #222222;
+      color: #111111;
       font-weight: 700;
       user-select: none;
+      letter-spacing: 0.04em;
     }
 
     .lang-switch {
       display: flex;
-      gap: 10px;
+      gap: 12px;
       justify-content: flex-end;
       flex: 1 1 auto;
-      min-width: 160px;
+      min-width: 180px;
     }
 
     .lang-btn {
       background-color: #20ffd4;
       border: none;
       border-radius: 8px;
-      padding: 8px 18px;
+      padding: 10px 20px;
       cursor: pointer;
       color: #000000;
       font-weight: 700;
-      font-size: 0.9rem;
-      transition: background-color 0.3s ease;
+      font-size: 0.95rem;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
       user-select: none;
+      box-shadow: 0 2px 6px rgba(32, 255, 212, 0.3);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .lang-btn:hover,
     .lang-btn.active {
       background-color: #1ad7b3;
+      box-shadow: 0 4px 12px rgba(26, 215, 179, 0.5);
     }
 
     section {
@@ -88,6 +95,7 @@
       margin-top: 40px;
       font-size: 1rem;
       color: #444444;
+      line-height: 1.7;
     }
 
     section.active {
@@ -95,17 +103,20 @@
     }
 
     section p {
-      margin-bottom: 1.2em;
+      margin-bottom: 1.3em;
     }
 
     a {
-      color: #20ffd4;
+      color: #000000;
       text-decoration: none;
+      font-weight: 600;
       transition: color 0.3s ease;
     }
-    a:hover {
-      color: #1ad7b3;
+    a:hover,
+    a:focus {
+      color: #20ffd4;
       text-decoration: underline;
+      outline: none;
     }
 
     footer {
@@ -116,32 +127,32 @@
       user-select: none;
     }
 
-    /* Responsivo */
     @media (max-width: 600px) {
       header {
         padding: 20px;
         flex-direction: column;
         align-items: flex-start;
+        gap: 12px;
       }
 
       h1 {
         text-align: left;
         font-size: 1.5rem;
-        margin: 15px 0;
-        flex: unset;
+        margin: 0;
         width: 100%;
+        flex: unset;
       }
 
       .lang-switch {
         justify-content: flex-start;
         min-width: auto;
         width: 100%;
-        gap: 8px;
+        gap: 10px;
       }
 
       .lang-btn {
         flex: 1;
-        padding: 10px 0;
+        padding: 12px 0;
         font-size: 1rem;
       }
     }
@@ -154,14 +165,14 @@
     </div>
     <h1>Privacy Policy</h1>
     <div class="lang-switch">
-      <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
-      <button class="lang-btn" onclick="switchLanguage('pt')">PT</button>
-      <button class="lang-btn" onclick="switchLanguage('es')">ES</button>
-      <button class="lang-btn" onclick="switchLanguage('fr')">FR</button>
+      <button class="lang-btn active" onclick="switchLanguage('en')" aria-pressed="true">EN</button>
+      <button class="lang-btn" onclick="switchLanguage('pt')" aria-pressed="false">PT</button>
+      <button class="lang-btn" onclick="switchLanguage('es')" aria-pressed="false">ES</button>
+      <button class="lang-btn" onclick="switchLanguage('fr')" aria-pressed="false">FR</button>
     </div>
   </header>
 
-  <section id="en" class="active">
+  <section id="en" class="active" tabindex="0">
     <p>We do not collect any personal information.</p>
     <p>This app is a demo version of Beelong, an artificial intelligence solution designed for personalized customer service, engagement, and automation, with a focus on direct selling and multi-level marketing businesses.</p>
     <p>Beelong offers a customizable platform, tailored to meet the specific needs of each client, delivering a unique and efficient experience for companies looking to scale their relationships.</p>
@@ -169,7 +180,7 @@
     <p>For more information about the full solution, visit: <a href="https://www.beelong.ai" target="_blank" rel="noopener noreferrer">https://www.beelong.ai</a></p>
   </section>
 
-  <section id="pt">
+  <section id="pt" tabindex="0">
     <p>Não coletamos nenhuma informação pessoal.</p>
     <p>Este aplicativo é uma versão demo do Beelong, uma solução de inteligência artificial desenvolvida para atendimento ao cliente personalizado, engajamento e automação, com foco em empresas de vendas diretas e marketing multinível.</p>
     <p>O Beelong oferece uma plataforma personalizável, adaptada às necessidades específicas de cada cliente, proporcionando uma experiência única e eficiente para empresas que desejam escalar seus relacionamentos.</p>
@@ -177,7 +188,7 @@
     <p>Para mais informações sobre a solução completa, acesse: <a href="https://www.beelong.ai" target="_blank" rel="noopener noreferrer">https://www.beelong.ai</a></p>
   </section>
 
-  <section id="es">
+  <section id="es" tabindex="0">
     <p>No recopilamos ninguna información personal.</p>
     <p>Esta aplicación es una versión de demostración de Beelong, una solución de inteligencia artificial diseñada para atención al cliente personalizada, compromiso y automatización, centrada en empresas de venta directa y marketing multinivel.</p>
     <p>Beelong ofrece una plataforma personalizable, adaptada a las necesidades específicas de cada cliente, brindando una experiencia única y eficiente para empresas que buscan escalar sus relaciones.</p>
@@ -185,7 +196,7 @@
     <p>Para más información sobre la solución completa, visita: <a href="https://www.beelong.ai" target="_blank" rel="noopener noreferrer">https://www.beelong.ai</a></p>
   </section>
 
-  <section id="fr">
+  <section id="fr" tabindex="0">
     <p>Nous ne collectons aucune information personnelle.</p>
     <p>Cette application est une version de démonstration de Beelong, une solution d'intelligence artificielle conçue pour un service client personnalisé, l'engagement et l'automatisation, avec un accent sur la vente directe et le marketing multiniveau.</p>
     <p>Beelong propose une plateforme personnalisable, adaptée aux besoins spécifiques de chaque client, offrant une expérience unique et efficace aux entreprises souhaitant développer leurs relations.</p>
@@ -201,8 +212,15 @@
     function switchLanguage(lang) {
       document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
       document.getElementById(lang).classList.add('active');
-      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-      document.querySelector(`.lang-btn[onclick="switchLanguage('${lang}')"]`).classList.add('active');
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-pressed', 'false');
+      });
+      const activeBtn = document.querySelector(`.lang-btn[onclick="switchLanguage('${lang}')"]`);
+      if(activeBtn){
+        activeBtn.classList.add('active');
+        activeBtn.setAttribute('aria-pressed', 'true');
+      }
     }
   </script>
 </body>
