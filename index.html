@@ -26,15 +26,11 @@
       background-color: #F2F2F0;
       border-bottom: 1px solid #999999;
       padding: 18px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       position: relative;
       z-index: 10;
     }
 
-    /* Container interno para limitar o conteúdo do header */
-    .header-container {
+    .header-container-top {
       width: 90%;
       max-width: 100%;
       margin: 0 auto;
@@ -57,22 +53,10 @@
       outline: none;
     }
 
-    h1 {
-      font-size: 1.9rem;
-      margin: 0;
-      flex: 1 1 auto;
-      text-align: center;
-      color: #111111;
-      font-weight: 700;
-      user-select: none;
-      letter-spacing: 0.04em;
-    }
-
     .lang-switch {
       display: flex;
       gap: 12px;
       justify-content: flex-end;
-      flex: 1 1 auto;
       min-width: 180px;
     }
 
@@ -94,6 +78,23 @@
     .lang-btn.active {
       background-color: #1ad7b3;
       box-shadow: 0 4px 12px rgba(26, 215, 179, 0.5);
+    }
+
+    /* Linha do título, linha separada, centralizado */
+    .header-container-bottom {
+      width: 90%;
+      max-width: 100%;
+      margin: 16px auto 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      margin: 0;
+      color: #111111;
+      font-weight: 700;
+      user-select: none;
+      letter-spacing: 0.04em;
     }
 
     section {
@@ -139,33 +140,33 @@
       header {
         padding: 20px;
       }
-      .header-container {
+      .header-container-top {
         width: 100%;
         padding: 0 20px;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 12px;
       }
 
-      h1 {
-        text-align: left;
-        font-size: 1.5rem;
-        width: 100%;
-        margin: 0;
-        flex: unset;
-      }
-
+      .back-link,
       .lang-switch {
-        justify-content: flex-start;
-        min-width: auto;
-        width: 100%;
-        gap: 10px;
+        flex: 1 1 100%;
+        justify-content: center;
+      }
+      .back-link {
+        order: 1;
+      }
+      .lang-switch {
+        order: 2;
       }
 
-      .lang-btn {
-        flex: 1;
-        padding: 12px 0;
-        font-size: 1rem;
+      .header-container-bottom {
+        width: 100%;
+        margin: 12px auto 0;
+      }
+
+      h1 {
+        font-size: 1.5rem;
       }
 
       section, footer {
@@ -177,17 +178,19 @@
 </head>
 <body>
   <header>
-    <div class="header-container">
+    <div class="header-container-top">
       <div class="back-link">
         <a href="https://www.beelong.ai" target="_blank" rel="noopener noreferrer">← Back to Beelong</a>
       </div>
-      <h1>Privacy Policy</h1>
       <div class="lang-switch">
         <button class="lang-btn active" onclick="switchLanguage('en')" aria-pressed="true">EN</button>
         <button class="lang-btn" onclick="switchLanguage('pt')" aria-pressed="false">PT</button>
         <button class="lang-btn" onclick="switchLanguage('es')" aria-pressed="false">ES</button>
         <button class="lang-btn" onclick="switchLanguage('fr')" aria-pressed="false">FR</button>
       </div>
+    </div>
+    <div class="header-container-bottom">
+      <h1>Privacy Policy</h1>
     </div>
   </header>
 
