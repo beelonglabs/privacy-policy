@@ -6,44 +6,56 @@
   <title>Privacy Policy - Beelong</title>
   <link rel="icon" href="https://media.licdn.com/dms/image/v2/D4D0BAQHgItTL9LyFgw/company-logo_200_200/company-logo_200_200/0/1728996469468/beelonghub_logo?e=2147483647&v=beta&t=Cf4QzisJtJZylwuRJzgYgVtZcvedSaMGGRFOpa9rNws" />
   <style>
+    /* Reset básico para margin e box-sizing */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    
     body {
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
       background-color: #F2F2F0;
-      color: #333;
+      color: #333333;
       margin: 0;
       padding: 40px 20px;
-      line-height: 1.6;
       max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+      font-size: 16px;
     }
 
     header {
       width: 100%;
       background-color: #F2F2F0;
-      padding: 20px;
-      box-sizing: border-box;
+      border-bottom: 1px solid #999999;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      border-bottom: 1px solid #eee;
       position: relative;
       z-index: 10;
     }
 
     .back-link a {
       text-decoration: none;
-      color: #222;
-      font-size: 0.9rem;
+      color: #222222;
+      font-size: 0.95rem;
       font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .back-link a:hover {
+      color: #20ffd4;
     }
 
     h1 {
       font-size: 2rem;
-      margin: 10px 0;
-      flex: 1 1 100%;
+      margin: 0;
+      flex: 1 1 auto;
       text-align: center;
-      color: #222;
+      color: #222222;
       font-weight: 700;
+      user-select: none;
     }
 
     .lang-switch {
@@ -51,19 +63,21 @@
       gap: 10px;
       justify-content: flex-end;
       flex: 1 1 auto;
+      min-width: 160px;
     }
 
     .lang-btn {
       background-color: #20ffd4;
       border: none;
       border-radius: 8px;
-      padding: 8px 16px;
+      padding: 8px 18px;
       cursor: pointer;
-      color: #000;
-      font-weight: bold;
+      color: #000000;
+      font-weight: 700;
+      font-size: 0.9rem;
       transition: background-color 0.3s ease;
+      user-select: none;
     }
-
     .lang-btn:hover,
     .lang-btn.active {
       background-color: #1ad7b3;
@@ -71,36 +85,64 @@
 
     section {
       display: none;
+      margin-top: 40px;
+      font-size: 1rem;
+      color: #444444;
     }
 
     section.active {
       display: block;
     }
 
+    section p {
+      margin-bottom: 1.2em;
+    }
+
+    a {
+      color: #20ffd4;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #1ad7b3;
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
       margin-top: 60px;
       font-size: 0.9rem;
-      color: #888;
+      color: #666666;
+      user-select: none;
     }
 
+    /* Responsivo */
     @media (max-width: 600px) {
       header {
+        padding: 20px;
         flex-direction: column;
         align-items: flex-start;
       }
 
       h1 {
-        font-size: 1.5rem;
         text-align: left;
+        font-size: 1.5rem;
+        margin: 15px 0;
         flex: unset;
         width: 100%;
-        margin-bottom: 10px;
       }
 
       .lang-switch {
         justify-content: flex-start;
-        margin-top: 10px;
+        min-width: auto;
+        width: 100%;
+        gap: 8px;
+      }
+
+      .lang-btn {
+        flex: 1;
+        padding: 10px 0;
+        font-size: 1rem;
       }
     }
   </style>
@@ -108,7 +150,7 @@
 <body>
   <header>
     <div class="back-link">
-      <a href="https://www.beelong.ai" target="_blank">← Back to Beelong</a>
+      <a href="https://www.beelong.ai" target="_blank" rel="noopener noreferrer">← Back to Beelong</a>
     </div>
     <h1>Privacy Policy</h1>
     <div class="lang-switch">
@@ -124,7 +166,7 @@
     <p>This app is a demo version of Beelong, an artificial intelligence solution designed for personalized customer service, engagement, and automation, with a focus on direct selling and multi-level marketing businesses.</p>
     <p>Beelong offers a customizable platform, tailored to meet the specific needs of each client, delivering a unique and efficient experience for companies looking to scale their relationships.</p>
     <p>This version is intended for demonstration and testing purposes only and does not represent the final product.</p>
-    <p>For more information about the full solution, visit: <a href="https://www.beelong.ai" target="_blank">https://www.beelong.ai</a></p>
+    <p>For more information about the full solution, visit: <a href="https://www.beelong.ai" target="_blank" rel="noopener noreferrer">https://www.beelong.ai</a></p>
   </section>
 
   <section id="pt">
@@ -132,7 +174,7 @@
     <p>Este aplicativo é uma versão demo do Beelong, uma solução de inteligência artificial desenvolvida para atendimento ao cliente personalizado, engajamento e automação, com foco em empresas de vendas diretas e marketing multinível.</p>
     <p>O Beelong oferece uma plataforma personalizável, adaptada às necessidades específicas de cada cliente, proporcionando uma experiência única e eficiente para empresas que desejam escalar seus relacionamentos.</p>
     <p>Esta versão é destinada exclusivamente para fins de demonstração e testes, e não representa o produto final.</p>
-    <p>Para mais informações sobre a solução completa, acesse: <a href="https://www.beelong.ai" target="_blank">https://www.beelong.ai</a></p>
+    <p>Para mais informações sobre a solução completa, acesse: <a href="https://www.beelong.ai" target="_blank" rel="noopener noreferrer">https://www.beelong.ai</a></p>
   </section>
 
   <section id="es">
@@ -140,7 +182,7 @@
     <p>Esta aplicación es una versión de demostración de Beelong, una solución de inteligencia artificial diseñada para atención al cliente personalizada, compromiso y automatización, centrada en empresas de venta directa y marketing multinivel.</p>
     <p>Beelong ofrece una plataforma personalizable, adaptada a las necesidades específicas de cada cliente, brindando una experiencia única y eficiente para empresas que buscan escalar sus relaciones.</p>
     <p>Esta versión está destinada exclusivamente a fines de demostración y prueba, y no representa el producto final.</p>
-    <p>Para más información sobre la solución completa, visita: <a href="https://www.beelong.ai" target="_blank">https://www.beelong.ai</a></p>
+    <p>Para más información sobre la solución completa, visita: <a href="https://www.beelong.ai" target="_blank" rel="noopener noreferrer">https://www.beelong.ai</a></p>
   </section>
 
   <section id="fr">
@@ -148,7 +190,7 @@
     <p>Cette application est une version de démonstration de Beelong, une solution d'intelligence artificielle conçue pour un service client personnalisé, l'engagement et l'automatisation, avec un accent sur la vente directe et le marketing multiniveau.</p>
     <p>Beelong propose une plateforme personnalisable, adaptée aux besoins spécifiques de chaque client, offrant une expérience unique et efficace aux entreprises souhaitant développer leurs relations.</p>
     <p>Cette version est destinée uniquement à des fins de démonstration et de test, et ne représente pas le produit final.</p>
-    <p>Pour plus d'informations sur la solution complète, visitez : <a href="https://www.beelong.ai" target="_blank">https://www.beelong.ai</a></p>
+    <p>Pour plus d'informations sur la solution complète, visitez : <a href="https://www.beelong.ai" target="_blank" rel="noopener noreferrer">https://www.beelong.ai</a></p>
   </section>
 
   <footer>
