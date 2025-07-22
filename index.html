@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy - Beelong</title>
   <link rel="icon" href="https://media.licdn.com/dms/image/v2/D4D0BAQHgItTL9LyFgw/company-logo_200_200/company-logo_200_200/0/1728996469468/beelonghub_logo?e=2147483647&v=beta&t=Cf4QzisJtJZylwuRJzgYgVtZcvedSaMGGRFOpa9rNws" />
   <style>
     body {
       font-family: 'Helvetica Neue', sans-serif;
-      background-color: #ffffff;
+      background-color: #F1FEFF;
       color: #333;
       margin: 0;
       padding: 40px 20px;
@@ -19,7 +19,7 @@
     }
 
     header {
-      width: 100%;
+      width: 100vw;
       background-color: #fff;
       padding: 20px;
       box-sizing: border-box;
@@ -28,6 +28,22 @@
       align-items: center;
       flex-wrap: wrap;
       border-bottom: 1px solid #eee;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      z-index: 10;
+    }
+
+    .header-content {
+      max-width: 800px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0 auto;
     }
 
     .back-link a {
@@ -83,13 +99,24 @@
 
     @media (max-width: 600px) {
       header {
+        left: 0;
+        right: 0;
+        margin-left: 0;
+        margin-right: 0;
         flex-direction: column;
         align-items: flex-start;
+      }
+
+      .header-content {
+        justify-content: flex-start;
       }
 
       h1 {
         font-size: 1.5rem;
         text-align: left;
+        flex: unset;
+        width: 100%;
+        margin-bottom: 10px;
       }
 
       .lang-switch {
@@ -101,21 +128,22 @@
 </head>
 <body>
   <header>
-    <div class="back-link">
-      <a href="https://www.beelong.ai" target="_blank">← Back to Beelong</a>
-    </div>
-    <h1>Privacy Policy</h1>
-    <div class="lang-switch">
-      <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
-      <button class="lang-btn" onclick="switchLanguage('pt')">PT</button>
-      <button class="lang-btn" onclick="switchLanguage('es')">ES</button>
-      <button class="lang-btn" onclick="switchLanguage('fr')">FR</button>
+    <div class="header-content">
+      <div class="back-link">
+        <a href="https://www.beelong.ai" target="_blank">← Back to Beelong</a>
+      </div>
+      <h1>Privacy Policy</h1>
+      <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+        <button class="lang-btn" onclick="switchLanguage('pt')">PT</button>
+        <button class="lang-btn" onclick="switchLanguage('es')">ES</button>
+        <button class="lang-btn" onclick="switchLanguage('fr')">FR</button>
+      </div>
     </div>
   </header>
 
   <section id="en" class="active">
     <p>We do not collect any personal information.</p>
-    <p>This is a demo version of Beelong, a customized AI solution for direct selling and multi-level marketing companies.</p>
     <p>This app is a demo version of Beelong, an artificial intelligence solution designed for personalized customer service, engagement, and automation, with a focus on direct selling and multi-level marketing businesses.</p>
     <p>Beelong offers a customizable platform, tailored to meet the specific needs of each client, delivering a unique and efficient experience for companies looking to scale their relationships.</p>
     <p>This version is intended for demonstration and testing purposes only and does not represent the final product.</p>
@@ -124,7 +152,6 @@
 
   <section id="pt">
     <p>Não coletamos nenhuma informação pessoal.</p>
-    <p>Esta é uma versão de demonstração do Beelong, uma solução de IA personalizada para empresas de vendas diretas e marketing multinível.</p>
     <p>Este aplicativo é uma versão demo do Beelong, uma solução de inteligência artificial desenvolvida para atendimento ao cliente personalizado, engajamento e automação, com foco em empresas de vendas diretas e marketing multinível.</p>
     <p>O Beelong oferece uma plataforma personalizável, adaptada às necessidades específicas de cada cliente, proporcionando uma experiência única e eficiente para empresas que desejam escalar seus relacionamentos.</p>
     <p>Esta versão é destinada exclusivamente para fins de demonstração e testes, e não representa o produto final.</p>
@@ -133,7 +160,6 @@
 
   <section id="es">
     <p>No recopilamos ninguna información personal.</p>
-    <p>Esta es una versión de demostración de Beelong, una solución de IA personalizada para empresas de venta directa y marketing multinivel.</p>
     <p>Esta aplicación es una versión de demostración de Beelong, una solución de inteligencia artificial diseñada para atención al cliente personalizada, compromiso y automatización, centrada en empresas de venta directa y marketing multinivel.</p>
     <p>Beelong ofrece una plataforma personalizable, adaptada a las necesidades específicas de cada cliente, brindando una experiencia única y eficiente para empresas que buscan escalar sus relaciones.</p>
     <p>Esta versión está destinada exclusivamente a fines de demostración y prueba, y no representa el producto final.</p>
@@ -142,7 +168,6 @@
 
   <section id="fr">
     <p>Nous ne collectons aucune information personnelle.</p>
-    <p>Il s'agit d'une version de démonstration de Beelong, une solution d'IA personnalisée pour les entreprises de vente directe et de marketing multiniveau.</p>
     <p>Cette application est une version de démonstration de Beelong, une solution d'intelligence artificielle conçue pour un service client personnalisé, l'engagement et l'automatisation, avec un accent sur la vente directe et le marketing multiniveau.</p>
     <p>Beelong propose une plateforme personnalisable, adaptée aux besoins spécifiques de chaque client, offrant une expérience unique et efficace aux entreprises souhaitant développer leurs relations.</p>
     <p>Cette version est destinée uniquement à des fins de démonstration et de test, et ne représente pas le produit final.</p>
